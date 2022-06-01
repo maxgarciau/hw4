@@ -1,13 +1,13 @@
 <h1>New Place</h1>
 <% if @current_user %>
 <%= form_with :model => @place do |form| %>
-  <p>
+   <div class="mt-5">
     <%= form.label "name" %>
     <%= form.text_field "name" %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+    </div>
+    <div class="mt-5">
+    <%= form.submit "Create Place", class: "btn btn-primary"  %>
+    </div>
 <% end %>
 <%else%>
 You need to login in order to create a new place

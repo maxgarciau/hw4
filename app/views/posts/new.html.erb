@@ -2,21 +2,29 @@
 
 <% if @current_user %>
 <%= form_with :model => @post do |form| %>
+   <div class="mb-3">
   <p>
     <%= form.label "title" %>
     <%= form.text_field "title" %>
   </p>
+  </div>
+  <div class="mb-3">
   <p>
     <%= form.label "description" %>
     <%= form.text_field "description" %>
   </p>
+  </div>
+  <div class="mb-3">
   <p>
     <%= form.label "posted_on" %>
     <%= form.date_field "posted_on" %>
   </p>
+  </div>
+  <div class="mb-3">
   <p>
-    <%= form.submit %>
+    <%= form.submit "Create Post", class: "btn btn-primary"  %>
   </p>
+  </div>
   <%= form.hidden_field "place_id" %>
 <% end %>
 
