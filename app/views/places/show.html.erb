@@ -1,14 +1,17 @@
-<h1><%= @place["name"] %></h1>
+<div class="mb-4">
+<h1>My posts in <%= @place["name"] %></h1>
+</div>
 
 <div class="mt-2">
 <p>
+  <button type="button" class="btn btn-light">
   <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+  </button>
 </p>
 </div>
 
 <% if @current_user %>
 
-<h2>My Posts</h2>
 <div class="row">
       <% for post in @posts %>
   <div class="col-md-4 col-sm-6">
