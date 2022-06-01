@@ -1,5 +1,6 @@
 <h1>New Post</h1>
 
+<% if @current_user %>
 <%= form_with :model => @post do |form| %>
   <p>
     <%= form.label "title" %>
@@ -17,4 +18,8 @@
     <%= form.submit %>
   </p>
   <%= form.hidden_field "place_id" %>
+<% end %>
+
+<%else%>
+You need to <a href="/login">login</a> in order to post
 <% end %>
