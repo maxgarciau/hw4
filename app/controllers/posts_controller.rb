@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.find_by({ "user_id" => session["user_id"] })
+    @posts = Post.all
   end
 
   def new
