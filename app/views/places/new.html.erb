@@ -2,8 +2,8 @@
 <% if @current_user %>
 <%= form_with :model => @place do |form| %>
    <div class="mt-5">
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
+    <%= form.label "name", :class => "form-label" %>
+    <%= form.text_field "name", :class => "form-control" %>
     </div>
     <div class="mt-5">
     <%= form.submit "Create Place", class: "btn btn-dark"  %>
