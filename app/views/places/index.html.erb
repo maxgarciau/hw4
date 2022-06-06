@@ -1,13 +1,15 @@
-<h1>Places</h1>
-
-<div class="mt-2">
-<button type="button" class="btn btn-light"><a href="/places/new">New place</a>
-  </button>
-</div>
+    <div class="row">
+      <div class="col-sm-9">
+        <h1>Places</h1>
+      </div>
+      <div class="col-sm-3 text-end">
+        <a href="/places/new/" class="btn btn-dark">New Place</a>
+      </div>
+    </div>
 
 <ul style="padding: 0; list-style: none;">
   <% for place in @places %>
-    <div class="mt-2">
+    <div class="mt-4">
     <li><h5><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></h5></li>
     </div>
   <% end %>

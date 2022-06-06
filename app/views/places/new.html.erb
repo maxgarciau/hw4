@@ -1,11 +1,11 @@
 <h1>New Place</h1>
 <% if @current_user %>
 <%= form_with :model => @place do |form| %>
-   <div class="mt-5">
+   <div class="mt-4">
     <%= form.label "name", :class => "form-label" %>
     <%= form.text_field "name", :class => "form-control" %>
     </div>
-    <div class="mt-5">
+    <div class="mt-4">
     <%= form.submit "Create Place", class: "btn btn-dark"  %>
     </div>
 <% end %>
