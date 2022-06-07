@@ -7,26 +7,18 @@
     <%= form.label "title", :class => "form-label" %>
     <%= form.text_field "title", :class => "form-control" %>
   </p>
-  </div>
-  <div class="mb-3">
-  <p>
-    <%= form.label "description", :class => "form-label" %>
-    <%= form.text_field "description", :class => "form-control" %>
-  </p>
-  </div>
-  <div class="mb-3">
   <p>
     <%= form.label "posted_on", :class => "form-label" %>
     <%= form.date_field "posted_on", :class => "form-control" %>
   </p>
-  </div>
-  <div class="mb-3">
   <p>
     <%= form.label "uploaded_image", :class => "form-label" %>
      <%= form.file_field "uploaded_image", :accept => "image/png,image/jpg,image/jpeg,image/gif", :class => "form-control" %>
   </p>
-  </div>
-  <div class="mb-3">
+  <p>
+    <%= form.label "description", :class => "form-label" %>
+    <%= form.text_field "description", :class => "form-control" %>
+  </p>
   <p>
     <%= form.submit "Create Post", class: "btn btn-dark"  %>
   </p>
